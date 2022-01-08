@@ -229,7 +229,7 @@ input, button { -webkit-appearance: button;}
     background-color: #cfd6dc;
     color: #4C6B8F;
 }
-.button.bold.cum {
+.button.bold.comment {
     font-weight: 700;
     background-color: #e6e6e6;
     color: #7d8084;
@@ -259,18 +259,18 @@ input, button { -webkit-appearance: button;}
     background: #5d80a6 url(/themepack/mobvk/0.0.1.0/resource/like2_liked2.png) no-repeat;
     background-position: 6px 8px;
 }
-.button.bold.cum {
+.button.bold.comment {
     font-weight: 700;
     color: #7d8084;
-    background: #e6e6e6 url(/themepack/mobvk/0.0.1.0/resource/cum.png) no-repeat;
+    background: #e6e6e6 url(/themepack/mobvk/0.0.1.0/resource/comment.png) no-repeat;
     background-position: 6px 8px;
     padding-left: 23px;
 }
-.button.bold.cum:hover {
+.button.bold.comment:hover {
     background-color: #d4d4d4;
 }
 /*ОК*/
-.button.bold.cum:active {
+.button.bold.comment:active {
     background-color: #d0d0d0;
 }
 .formInput {
@@ -1013,35 +1013,35 @@ h4 {
     margin-bottom: 0;
 }
 
-.content_post_cums {
+.content_post_comments {
     background: #fff;
 }
-.content_post_cum {
+.content_post_comment {
     padding: 10px;
     padding-top: 0;
 }
 
-.content_post_cum>.post>.actions {
+.content_post_comment>.post>.actions {
     border: none;
     padding-bottom: 0;
 }
 
 
-.cumment>.author>.ava {
+.comment>.author>.ava {
     width: 55px;
     max-height: 55px;
     border-radius: 2px;
 }
-.cumment>.author {
+.comment>.author {
     width: 65px;
 }
-.cumment {
+.comment {
     display: flex;
     padding-left: 10px;
     padding-right: 10px;
     padding-top: 10px;
 }
-.cum_inputs {
+.comment_inputs {
     padding-bottom: 10px;
 }
 
@@ -1084,7 +1084,7 @@ h4 {
 .button.bold.like:hover {
     background-color: #e6e6e6;
 }
-.button.bold.cum:hover {
+.button.bold.comment:hover {
     background-color: #e6e6e6;
 }
 .element:hover {
