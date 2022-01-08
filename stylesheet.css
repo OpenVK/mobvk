@@ -229,7 +229,7 @@ input, button { -webkit-appearance: button;}
     background-color: #cfd6dc;
     color: #4C6B8F;
 }
-.button.bold.comment {
+.button.bold.commentbtn {
     font-weight: 700;
     background-color: #e6e6e6;
     color: #7d8084;
@@ -259,18 +259,18 @@ input, button { -webkit-appearance: button;}
     background: #5d80a6 url(/themepack/mobvk/0.0.1.0/resource/like2_liked2.png) no-repeat;
     background-position: 6px 8px;
 }
-.button.bold.comment {
+.button.bold.commentbtn {
     font-weight: 700;
     color: #7d8084;
     background: #e6e6e6 url(/themepack/mobvk/0.0.1.0/resource/comment.png) no-repeat;
     background-position: 6px 8px;
     padding-left: 23px;
 }
-.button.bold.comment:hover {
+.button.bold.commentbtn:hover {
     background-color: #d4d4d4;
 }
 /*ОК*/
-.button.bold.comment:active {
+.button.bold.commentbtn:active {
     background-color: #d0d0d0;
 }
 .formInput {
@@ -1084,7 +1084,7 @@ h4 {
 .button.bold.like:hover {
     background-color: #e6e6e6;
 }
-.button.bold.comment:hover {
+.button.bold.commentbtn:hover {
     background-color: #e6e6e6;
 }
 .element:hover {
