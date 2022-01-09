@@ -17,11 +17,11 @@
 <div class="contentWraplegend" onclick="hidePanel(this);">
     <span>Пост</span>
 </div>
-<div class="content_post_cums">
-    <div class="content_post_cum">
+<div class="content_post_comments">
+    <div class="content_post_comment">
         {include "../components/post.xml", post => $post, forceNoCommentsLink => TRUE, forceNoDeleteLink => TRUE}
     </div>
-    <div class="cum_inputs">
+    <div class="comment_inputs">
         {include "../components/comments.xml",
                  comments => $comments,
                  count => $cCount,
