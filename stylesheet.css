@@ -851,7 +851,7 @@ img.rounded, .post > .author > .ava {
     padding: 5px 12px;
 }
 .button.new_post {
-    margin-top: -18px;
+    margin-top: -10px;
 }
 .pure-g {
     display: flex;
