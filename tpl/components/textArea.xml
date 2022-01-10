@@ -1,7 +1,7 @@
 {var textAreaId = $post === null ? rand(1,300) : $post->getId()}
 
 <div id="write" class="new_post_text" onfocusin="expand_wall_textarea({$textAreaId});">
-    <form action="{$route}" method="post" enctype="multipart/form-data" style="margin:0;">
+    <form action="{$route}" method="post" enctype="multipart/form-data" style="margin:0;margin-top: 4px;">
         <textarea id="wall-post-input{$textAreaId}" placeholder="{_write}" name="text" style="width: 100%;resize: none;" class="small-textarea"></textarea>
         <div>
             <!-- padding to fix <br/> bug -->
