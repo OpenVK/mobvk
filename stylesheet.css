@@ -1187,3 +1187,12 @@ h4 {
     margin-left: 10px;
     padding-bottom: 10px;
 }
+/*Если вова знал сколько я потратил денег на его похороны он бы перевернулся в канаве*/
+.attachments_b .attachment .actions {
+    display: none;
+}
+.attachments_b .attachment .post {
+    padding-left: 30px;
+    background-image: url(https://i.imgur.com/IhQ56DE.png);
+    background-repeat: repeat-y;
+}
