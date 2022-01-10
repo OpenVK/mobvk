@@ -1,4 +1,4 @@
-# openvkmobile
+# OpenVK Mobile
 Mobile theme for OpenVK
 
-Если кирилл спиздит тему то ему пизда.
+The presented source code is at an early stage and may contain pieces of old OVK code.
