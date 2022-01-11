@@ -603,8 +603,33 @@ img.rounded, .post > .author > .ava {
     max-width: 100%;
 }
 
-.post.nsfw > .attachments > .attachment > .media:not(:hover) {
-    filter: blur(20px);
+.post.nsfw > .attachments > .attachments_b > .attachment > a > .media {
+    filter: saturate(0.8) blur(15px);
+}
+
+.post.nsfw > .attachments > .attachments_b > .attachment {
+    overflow: hidden;
+    position: relative;
+}
+
+.post.nsfw > .attachments > .attachments_b > .attachment:active > a > .media {
+    filter: none;
+}
+
+.post.nsfw > .attachments > .attachments_b > .attachment::after {
+    position: absolute;
+    top: calc(50% - 16px);
+    left: 0;
+    width: 100%;
+    padding: 8px 0;
+    background-color: hsla(0, 0%, 0%, .5);
+    color: #fff;
+    text-align: center;
+    content: attr(data-localized-nsfw-text);
+}
+
+.post.nsfw > .attachments > .attachments_b > .attachment:active::after {
+    display: none;
 }
 
 .post > .attachments > .attachment > .document {
@@ -902,6 +927,7 @@ img.rounded, .post > .author > .ava {
     margin-top: 10px;
 }
 /*хочу приехатб к вовоцке(*/
+/* перехочешь */
 .media {
     width: 100%;
     padding-bottom: 8px;

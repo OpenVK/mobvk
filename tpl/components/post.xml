@@ -1,5 +1,5 @@
 {var author = $post->getOwner()}
-                        <div class="post">
+                        <div n:class="post, $post->isExplicit() ? nsfw">
                             <div class="author">
                                 <img class="ava" src="{$author->getAvatarURL()}">
                                 <div>
