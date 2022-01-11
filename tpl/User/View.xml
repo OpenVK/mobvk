@@ -178,14 +178,11 @@
                                 <td><span class="text-gray">{_politViews}: </span></td>
                                 <td>{tr("politViews_" . $user->getPoliticalViews())}</td>
                             </tr>
-                            <tr n:if="$user->getBirthday() > 0">
-                                <td><span class="text-gray">День рождения: </span></td>
+                            <tr n:if="$user->getBirthday()->timestamp() > 0">
+                                <td><span class="text-gray">{_birth_date}:</span></td>
                                 <td>
-                                    {date("d F Y", $user->getBirthday())}
-                                    {date('m d') >= date('m d', $user->getBirthday())
-                                     ? date('Y') - date('Y', $user->getBirthday())
-                                     : (date('m d') < date('m d', $user->getBirthday()) ? date('Y') - date('Y', $user->getBirthday()) - 1)}
-                                    {_years}
+                                    {$user->getBirthday()->format('%e %B %Y')},
+                                    {tr("years", $user->getAge())}
                                 </td>
                             </tr>
                         </tbody>
