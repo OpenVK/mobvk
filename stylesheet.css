@@ -273,6 +273,21 @@ input, button { -webkit-appearance: button;}
 .button.bold.commentbtn:active {
     background-color: #d0d0d0;
 }
+.button.bold.sharebtn {
+    font-weight: 700;
+    color: #7d8084;
+    background: #e6e6e6 url(/themepack/mobvk/0.0.1.0/resource/repost2.png) no-repeat;
+    background-position: 6px 7px;
+    padding-left: 23px;
+    padding-right: 6px;
+}
+.button.bold.sharebtn:hover {
+    background-color: #d4d4d4;
+}
+/*ОК*/
+.button.bold.sharebtn:active {
+    background-color: #d0d0d0;
+}
 .formInput {
     margin-bottom: 8px;
 }
@@ -1111,6 +1126,9 @@ h4 {
     background-color: #e6e6e6;
 }
 .button.bold.commentbtn:hover {
+    background-color: #e6e6e6;
+}
+.button.bold.sharebtn:hover {
     background-color: #e6e6e6;
 }
 .element:hover {
