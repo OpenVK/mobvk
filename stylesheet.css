@@ -51,7 +51,7 @@ input, button { -webkit-appearance: button;}
 }
 
 .navigation {
-    /*background-color: #5d80a6;*/
+    background-color: #5d80a6;
     background: linear-gradient(#6b89ab, #4f6d91);
     color: #fff;
     padding: 12px;
