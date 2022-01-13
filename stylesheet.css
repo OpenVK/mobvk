@@ -1240,3 +1240,20 @@ h4 {
     background-image: url(https://i.imgur.com/IhQ56DE.png);
     background-repeat: repeat-y;
 }
+
+.paginators {
+    margin-top: 15px;
+}
+.paginators a {
+    background: #f0f2f4;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 2px;
+    padding-left: 11px;
+    padding-right: 11px;
+}
+.paginators .active {
+    background: #5d80a6;
+    color: #fff;
+    font-weight: bold;
+}
