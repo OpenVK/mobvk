@@ -86,7 +86,7 @@
                         <a href="/search">Поиск </a>
                     </li>
                     <li class="element prmenu">
-                        <a href="">Полная Версия</a>
+                        <a href="/settings/reset_theme?hash={urlencode($csrfToken)}">Полная Версия</a>
                     </li>
                 </ul>
             </div>
