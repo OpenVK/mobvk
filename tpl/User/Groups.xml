@@ -13,12 +13,7 @@
     
 {/block}
 
-
 {* BEGIN ELEMENTS DESCRIPTION *}
-<div class="contentWraplegend" onclick="hidePanel(this);">
-    <span>Группы</span>
-    <span><a href="/groups_create" class="float-right">{_"create_group"}</a></span>
-</div>
 
 {block tabs}
 	{if !is_null($thisUser) && $user->getId() === $thisUser->getId()}

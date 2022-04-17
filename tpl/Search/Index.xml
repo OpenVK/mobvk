@@ -12,11 +12,7 @@
 
 {/block}
 
-
-
 {* BEGIN ELEMENTS DESCRIPTION *}
-
-
 
 {block tabs}
     <div {if $type === "users"}id="activetabs"{/if} class="tab">

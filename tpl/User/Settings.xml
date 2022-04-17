@@ -442,7 +442,7 @@
             
             <div class="formInput">
                 <label>{_"style"}:</label>
-                                        <select name="style" class="cocksexy">
+                                        <select name="style" class="settings-select">
                                 <option value="ovk" {if $user->getStyle() == 'ovk'}selected{/if}>OpenVK ({_"default"})</option>
                                 <option n:foreach="$themes as $id => $theme"
                                         n:attr="selected => $user->getStyle() === $id"

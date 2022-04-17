@@ -24,17 +24,6 @@
     {/if}
 {/block} 
 
-<!-- {block header}
-    <a href="{$user->getURL()}">{$user->getCanonicalName()}</a> »
-    {if $act == "incoming"}
-        {_"incoming_req"}
-    {elseif $act == "outcoming"}
-        {_"outcoming_req"}
-    {else}
-        {_"friends"}
-    {/if}
-{/block} -->
-
 {block titleHeader}
     Друзья
 {/block}

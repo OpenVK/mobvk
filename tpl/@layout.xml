@@ -1,12 +1,15 @@
+{var instance_name = OPENVK_ROOT_CONF['openvk']['appearance']['name']}
+
+<!DOCTYPE html>
 <html n:if="!isset($parentModule) || substr($parentModule, 0, 21) === 'libchandler:absolute.'">
     <head>
         <title>
-            {ifset title}{include title} - {/ifset}OpenVK
+            {ifset title}{include title} - {/ifset}{$instance_name}
         </title>
         <meta http-equiv="Content-Type" content="application/vnd.wap.xhtml+xml;charset=utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
         <link rel="shortcut icon" href="/assets/packages/static/openvk/img/icon.ico" />
-        <meta name="application-name" content="OpenVK" />
+        <meta name="application-name" content="{$instance_name}" />
         <meta n:ifset="$csrfToken" name="csrf" value="{$csrfToken}" />
 
         <link rel="stylesheet" href="/themepack/mobvk/0.0.1.0/stylesheet/styles.css?v={time()}" />
@@ -17,7 +20,6 @@
         <script defer src="/themepack/mobvk/0.0.1.0/resource/podrobnee.js"></script>
     </head>
 
-
     <body class="app">
         <div class="navigation">
             <div class="headername">
@@ -27,126 +29,114 @@
 
         <div class="menuovk">
             {ifset $thisUser}
-            <a href="{$thisUser->getURL()}" class="menuprlink">
-                <div class="menunameava">
-                    <table class="pr_ovk_page">
-                        <tr>
-                            <td rowspan="2">
-                                <img class="ava" src="{$thisUser->getAvatarURL()}" />
-                            </td> <!-- Ава -->
+                <a href="{$thisUser->getURL()}" class="menuprlink">
+                    <div class="menunameava">
+                        <table class="pr_ovk_page">
+                            <tr>
+                                <td rowspan="2">
+                                    <img class="ava" src="{$thisUser->getAvatarURL()}" />
+                                </td>
+                                <td rowspan="2">
+                                    <div class="name">{$thisUser->getFullName()}</div>
+                                    <div class="status">{$thisUser->getStatus()}</div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </a>
 
-                            <td rowspan="2">
-                                <div class="name">{$thisUser->getFullName()}</div>
-                                <div class="status">{$thisUser->getStatus()}</div>
-                            </td> <!-- Имя -->
-                        </tr>
-                    </table>
-                </div>
-            </a>
-
-            <div class="content">
-                <ul class="menu">
-                    <li class="element prmenu">
-                        <a href="/friends{$thisUser->getId()}">
-                            Мои Друзья 
+                <div class="content">
+                    <ul class="menu">
+                        <li class="element prmenu">
+                            <a href="/friends{$thisUser->getId()}">
+                                Мои Друзья
                                 {if $thisUser->getFollowersCount() > 0}
-                            <span class="counter urgent">{$thisUser->getFollowersCount()}</span>
-                            {/if}
-                        </a>
-                    </li>
-                    <li class="element prmenu">
-                        <a n:if="$thisUser->getLeftMenuItemStatus('photos')" href="/albums{$thisUser->getId()}">Мои Фотографии </a>
-                    </li>
-                    <li class="element prmenu">
-                        <a n:if="$thisUser->getLeftMenuItemStatus('messages')" href="/im">
-                            Мои Сообщения 
+                                    <span class="counter urgent">{$thisUser->getFollowersCount()}</span>
+                                {/if}
+                            </a>
+                        </li>
+                        <li class="element prmenu">
+                            <a n:if="$thisUser->getLeftMenuItemStatus('photos')" href="/albums{$thisUser->getId()}">Мои Фотографии</a>
+                        </li>
+                        <li class="element prmenu">
+                            <a n:if="$thisUser->getLeftMenuItemStatus('messages')" href="/im">
+                                Мои Сообщения
                                 {if $thisUser->getUnreadMessagesCount() > 0}
-                            <span class="counter urgent">{$thisUser->getUnreadMessagesCount()}</span>
-                            {/if}
-                        </a>
-                    </li>
-                    <li class="element prmenu">
-                        <a n:if="$thisUser->getLeftMenuItemStatus('news')" href="/feed?posts=100">Мои Новости </a>
-                    </li>
-                    <li class="element prmenu">
-                        <a href="/notifications">
-                            Мои Ответы 
+                                    <span class="counter urgent">{$thisUser->getUnreadMessagesCount()}</span>
+                                {/if}
+                            </a>
+                        </li>
+                        <li class="element prmenu">
+                            <a n:if="$thisUser->getLeftMenuItemStatus('news')" href="/feed?posts=100">Мои Новости</a>
+                        </li>
+                        <li class="element prmenu">
+                            <a href="/notifications">
+                                Мои Ответы
                                 {if $thisUser->getNotificationsCount() > 0}
-                            <span class="counter urgent">{$thisUser->getNotificationsCount()}</span>
-                            {/if}
-                        </a>
-                    </li>
-                    <li class="element prmenu">
-                        <a n:if="$thisUser->getLeftMenuItemStatus('groups')" href="/groups{$thisUser->getId()}">Мои Группы </a>
-                    </li>
-                    <li class="element prmenu">
-                        <a href="/settings">Мои Настройки </a>
-                    </li>
-                    <li class="element prmenu">
-                        <a href="/search">Поиск </a>
-                    </li>
-                    <li class="element prmenu">
-                        <a href="/settings/reset_theme?hash={urlencode($csrfToken)}">Полная Версия</a>
-                    </li>
-                </ul>
-            </div>
+                                    <span class="counter urgent">{$thisUser->getNotificationsCount()}</span>
+                                {/if}
+                            </a>
+                        </li>
+                        <li class="element prmenu">
+                            <a n:if="$thisUser->getLeftMenuItemStatus('groups')" href="/groups{$thisUser->getId()}">Мои Группы</a>
+                        </li>
+                        <li class="element prmenu">
+                            <a href="/settings">Мои Настройки</a>
+                        </li>
+                        <li class="element prmenu">
+                            <a href="/search">Поиск</a>
+                        </li>
+                        <li class="element prmenu">
+                            <a href="/settings/reset_theme?hash={urlencode($csrfToken)}">Полная Версия</a>
+                        </li>
+                    </ul>
+                </div>
             {else}
-            <div class="content">
-                <ul class="menu">
-                    <li class="element prmenu">
-                        <a href="/login">Войти</a>
-                    </li>
-                    <li class="element prmenu">
-                        <a href="/reg">Регистрация</a>
-                    </li>
-                </ul>
-            </div>
+                <div class="content">
+                    <ul class="menu">
+                        <li class="element prmenu">
+                            <a href="/login">Войти</a>
+                        </li>
+                        <li class="element prmenu">
+                            <a href="/reg">Регистрация</a>
+                        </li>
+                    </ul>
+                </div>
             {/ifset}
         </div>
 
         <div class="main">
             <div n:if="isset($thisUser) && $userTainted" class="alert warn">
                 <b class="head">Подмена пользователя активна</b>
-                Вы вошли как
-                <b>{$thisUser->getCanonicalName()}</b>
-                . Пожалуйста, уважайте
-                право на тайну переписки других людей и не злоупотребляйте подменой пользователя.
-                Нажмите
-                <a href="/setSID/unset?hash={rawurlencode($csrfToken)}">здесь</a>
-                , чтобы выйти.
+                Вы вошли как <b>{$thisUser->getCanonicalName()}</b>. Пожалуйста, уважайте право на тайну переписки других людей и не злоупотребляйте подменой пользователя.
+                Нажмите <a href="/setSID/unset?hash={rawurlencode($csrfToken)}">здесь</a>, чтобы выйти.
             </div>
             {ifset $flashMessage}
-            <div class="alert {$flashMessage->type}">
-                <b class="head">{$flashMessage->title}</b>
-                {$flashMessage->msg|noescape}
-            </div>
+                <div class="alert {$flashMessage->type}">
+                    <b class="head">{$flashMessage->title}</b>
+                    {$flashMessage->msg|noescape}
+                </div>
             {/ifset}
 
             {ifset titleHeader}
-            <div class="contentWraplegend">
-                <span>{include titleHeader}</span>
-            </div>
+                <div class="contentWraplegend">
+                    <span>{include titleHeader}</span>
+                </div>
             {/ifset}
 
             {ifset titleHeaderphoto}
-            <div class="contentWraplegend photo">
-                <span>{include titleHeaderphoto}</span>
-            </div>
+                <div class="contentWraplegend photo">
+                    <span>{include titleHeaderphoto}</span>
+                </div>
             {/ifset}
-            
+
             {include body}
-            <!-- <div id="page_footer">
-                {var dbVersion = \Chandler\Database\DatabaseConnection::i()->getConnection()->getPdo()->getAttribute(\PDO::ATTR_SERVER_VERSION)}
-                
-                <p>OpenVK <a href="/about:openvk2">{php echo OPENVK_VERSION}</a> | PHP: {phpversion()} | DB: {$dbVersion}</p>
-                <p n:ifcontent>
-                    {php echo OPENVK_ROOT_CONF["openvk"]["appearance"]["motd"]}
-                </p>
-            </div> -->
         </div>
     </body>
-</html>{if isset($parentModule) && substr($parentModule, 0, 21) !== 'libchandler:absolute.'}<!-- INCLUDING TEMPLATE FROM PARENTMODULE: {$parentModule} -->
+</html>
 
-    
+{if isset($parentModule) && substr($parentModule, 0, 21) !== 'libchandler:absolute.'}
+    <!-- INCLUDING TEMPLATE FROM PARENTMODULE: {$parentModule} -->
+
     {include body}
 {/if}
