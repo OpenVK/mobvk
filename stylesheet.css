@@ -1241,6 +1241,10 @@ h4 {
     background-repeat: repeat-y;
 }
 
+.name-checkmark {
+    margin-left: 2pt;
+}
+
 .paginators {
     margin-top: 15px;
 }
