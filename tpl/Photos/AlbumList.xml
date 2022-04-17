@@ -25,7 +25,7 @@
 
 {block preview}
     {var cover   = $x->getCoverPhoto()}
-    {var preview = is_null($cover) ? "/assets/packages/static/openvk/img/camera_200.png" : $cover->getURL()}
+    {var preview = is_null($cover) ? "/assets/packages/static/openvk/img/camera_200.png" : $cover->getURLBySizeId("tiny")}
     
     <center style="height: 54pt; width: 140px;">
         <a href="/album{$x->getPrettyId()}">

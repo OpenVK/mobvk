@@ -190,7 +190,7 @@
                 return {
                     "sender": {
                         "link": {$thisUser->getURL()},
-                        "avatar": {$thisUser->getAvatarUrl()},
+                        "avatar": {$thisUser->getAvatarUrl('tiny')},
                         "name": {$thisUser->getFullName()}
                     },
                     "timing": {
@@ -208,7 +208,7 @@
                 return {
                     "sender": {
                         "link": {$correspondent->getURL()},
-                        "avatar": {$correspondent->getAvatarUrl()},
+                        "avatar": {$correspondent->getAvatarUrl('tiny')},
                         "name": {$correspondent->getFullName()}
                     },
                     "timing": {

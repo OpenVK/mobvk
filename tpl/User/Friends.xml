@@ -58,7 +58,7 @@
 {/block}
 
 {block preview}
-    <img src="{$x->getAvatarUrl()}" class="listView_img"/>
+    <img src="{$x->getAvatarUrl('tiny')}" class="listView_img"/>
 {/block}
 
 {block name}

@@ -48,7 +48,7 @@
         <div class="content">
             <div class="pure-g" style="padding-bottom: 12px;">
                 <div id="profile_basicInfo__avatar">
-                        <img src="{$club->getAvatarUrl()}"/>
+                        <img src="{$club->getAvatarURL('tiny')}"/>
                 </div>
                 
                 <div id="profile_basicInfo__info" class="pure-u-3-4">

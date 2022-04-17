@@ -958,8 +958,8 @@ img.rounded, .post > .author > .ava {
 
 
 .listView_img {
-    max-width: 55px;
-    max-height: 55px;
+    width: 55px;
+    height: 55px;
     border-radius: 2px;
     object-fit: cover;
 }
@@ -1092,7 +1092,7 @@ h4 {
     text-align: center;
 }
 .album-photo--image {
-    height: 400px;
+    width: 400px;
 }
 
 

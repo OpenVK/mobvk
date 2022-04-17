@@ -48,7 +48,7 @@
     </tbody> -->
     <div class="comment">
         <div class="author">
-            <img class="ava" src="{$author->getAvatarURL()}">
+            <img class="ava" src="{$author->getAvatarURL('tiny')}">
         </div>
         <div class="comment_content">
                     <a href="{$author->getURL()}"><b>{$author->getCanonicalName()}</b></a>

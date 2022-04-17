@@ -33,7 +33,7 @@
                 {var lastMsg   = $coresp->getPreviewMessage()}
                 
                 <div class="crp-entry--image">
-                    <img src="{$recipient->getAvatarURL()}"
+                    <img src="{$recipient->getAvatarURL('tiny')}"
                     alt="Фотография пользователя" />
                 </div>
                 <div class="crp-entry--info">

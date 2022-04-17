@@ -59,7 +59,7 @@
                 <div class="pure-g" style="padding-bottom: 12px;">
                     <div id="profile_basicInfo__avatar">
                         <a href="{$user->getAvatarLink()|nocheck}">
-                            <img src="{$user->getAvatarUrl()}"
+                            <img src="{$user->getAvatarURL('tiny')}"
                                 alt="{$user->getCanonicalName()}" />
                         </a>
                     </div>
