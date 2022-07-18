@@ -143,7 +143,7 @@
                                 </tr>
                                 <tr>
                                     <td><span class="text-gray">{_relationship}: </span></td>
-                                    <td>{tr("relationship_" . $user->getMaritalStatus())}</td>
+                                    <td>{$user->getLocalizedMaritalStatus()}</td>
                                 </tr>
                                 <tr>
                                     <td><span class="text-gray">{_registration_date}: </span></td>
@@ -155,18 +155,17 @@
                                 </tr>
                                 <tr n:if="!is_null($user->getHometown())">
                                     <td><span class="text-gray">{_hometown}: </span></td>
-                                    <td>{$user->getHometown()}</td>
+                                    <td>{var $pviews = $user->getPoliticalViews()}{_"politViews_$pviews"}</td>
                                 </tr>
                                 <tr>
                                     <td><span class="text-gray">{_politViews}: </span></td>
                                     <td>{tr("politViews_" . $user->getPoliticalViews())}</td>
                                 </tr>
-                                <tr n:if="$user->getBirthday()->timestamp() > 0">
+                                <tr n:if="!is_null($user->getBirthday())">
                                     <td><span class="text-gray">{_birth_date}:</span></td>
-                                    <td>
-                                        {$user->getBirthday()->format('%e %B %Y')},
-                                        {tr("years", $user->getAge())}
-                                    </td>
+                                    <td n:if="$user->getBirthdayPrivacy() == 0">{$user->getBirthday()->format('%e %B %Y')},
+                                        {tr("years", $user->getAge())}</td>
+                                    <td n:if="$user->getBirthdayPrivacy() == 1">{$user->getBirthday()->format('%e %B')}</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -191,6 +190,14 @@
                                             <td>
                                                 <a href="https://t.me/{$user->getTelegram()}" rel="ugc" target="_blank">
                                                     @{$user->getTelegram()}
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr n:if="!is_null($user->getWebsite())">
+                                            <td><span class="text-gray">{_personal_website}: </span></td>
+                                            <td>
+                                                <a href="{$user->getWebsite()}" rel="ugc" target="_blank">
+                                                    {$user->getWebsite()}
                                                 </a>
                                             </td>
                                         </tr>
