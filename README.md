@@ -1,3 +1,5 @@
+# NO LONGER MAINTAINED ТОМУ ЩО ЗАЛУПА ЄБАНАЯ, ЧЕКАЙТЕ НОВОЙ ВЕРСІЇ
+
 # OpenVK Mobile (theme)
 Mobile theme for OpenVK that ~~cosplays~~ imitates the old m.vk.com design. _Only modern browsers supported._
 
